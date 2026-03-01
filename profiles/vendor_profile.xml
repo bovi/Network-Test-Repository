@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VendorProfile xmlns="urn:example:vendor-profile:1.0" id="VP-MBUQRATW95NM" generatedAt="2026-03-01T13:16:56Z">
+  <Vendor>
+    <Name>CobaltEdge</Name>
+    <Code>CBED</Code>
+    <OUI>E4:5F:01</OUI>
+    <SupportTier>enterprise</SupportTier>
+  </Vendor>
+  <DocumentControl>
+    <Version>1.0</Version>
+    <ChangeLog>
+      <Entry ts="2026-03-01T13:16:56Z" author="auto">
+        <Summary>Generated synthetic vendor profile for lab/testing.</Summary>
+      </Entry>
+    </ChangeLog>
+    <Signature alg="sha256">20e8594117f39829fa2c673be7ba1165d67c09f9442000b9e401a2e64b495806</Signature>
+  </DocumentControl>
+  <ProductCatalog>
+    <DeviceProfile id="DEV-O2I4NZ12FY">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X001</Model>
+        <SKU>CBED-SKU-0001</SKU>
+        <Serial>WDPZ65209931</Serial>
+        <HardwareRevision>R1.3</HardwareRevision>
+        <Firmware>
+          <Version>2.7.13</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">8953a8f605a1dd185eb42b4aa80ab756fe39f567d65de1a067f97665b3458733</ImageHash>
+        </Firmware>
+        <UDI>795584a93dcf913c9107bcd56f337017</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:5D:A5:55</MAC>
+          <IPv4>192.0.2.2</IPv4>
+          <IPv6>2001:db8:0001::1</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="BRIDGE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="150"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-ZG5G7FVVVG">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X002</Model>
+        <SKU>CBED-SKU-0002</SKU>
+        <Serial>L6RO10304055</Serial>
+        <HardwareRevision>R2.6</HardwareRevision>
+        <Firmware>
+          <Version>3.14.26</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">4f8acd160b189a4809a8e249fb154aa938b74f7596b852ec1eb61c389d8b9113</ImageHash>
+        </Firmware>
+        <UDI>3a67e0d41f98fb7bf107c4ddc874f4d5</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:08:FA:AC</MAC>
+          <IPv4>192.0.2.3</IPv4>
+          <IPv6>2001:db8:0002::2</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="ENTITY-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="SNMPv2-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="200"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-85E9GRU2L5">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X003</Model>
+        <SKU>CBED-SKU-0003</SKU>
+        <Serial>ISBK01686561</Serial>
+        <HardwareRevision>R3.9</HardwareRevision>
+        <Firmware>
+          <Version>4.1.39</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">253f6979ed058055cf276e66cc6dc0d3b5bc00b5d5b8e3b6da6b6baf208a0d2f</ImageHash>
+        </Firmware>
+        <UDI>85a9076d5fb08c0f8c570978c6cd8488</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:2F:92:70</MAC>
+          <IPv4>192.0.2.4</IPv4>
+          <IPv6>2001:db8:0003::3</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="IF-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="250"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-T8SE82NY78">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X004</Model>
+        <SKU>CBED-SKU-0004</SKU>
+        <Serial>4VKU80256094</Serial>
+        <HardwareRevision>R4.2</HardwareRevision>
+        <Firmware>
+          <Version>1.8.52</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">68b5ad922a84594f942060fbe1f8734f831575c9b91655cbb29904436640682d</ImageHash>
+        </Firmware>
+        <UDI>7ebe1e584f7678848f17f3fc6199881b</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:68:92:36</MAC>
+          <IPv4>192.0.2.5</IPv4>
+          <IPv6>2001:db8:0004::4</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-6/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="RMON-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="300"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-QJFXKV1KV7">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X005</Model>
+        <SKU>CBED-SKU-0005</SKU>
+        <Serial>ELAL55444860</Serial>
+        <HardwareRevision>R5.5</HardwareRevision>
+        <Firmware>
+          <Version>2.15.65</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">b6dbce08fd0902fe6c13276d1f85120f30f6c9f7a870781b0ebb17187341b6d3</ImageHash>
+        </Firmware>
+        <UDI>d2bad8e71dbb1fff09de72a26619a099</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:37:D6:99</MAC>
+          <IPv4>192.0.2.6</IPv4>
+          <IPv6>2001:db8:0005::5</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="RMON-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="350"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-4YMRWGUU1C">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X006</Model>
+        <SKU>CBED-SKU-0006</SKU>
+        <Serial>RD5Y54996074</Serial>
+        <HardwareRevision>R0.8</HardwareRevision>
+        <Firmware>
+          <Version>3.2.78</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">003f47f2c0c8fe9956e4981e394136575e87decd434d401a78e10d5cdb705abf</ImageHash>
+        </Firmware>
+        <UDI>7614c600eb8b161ceb44b7d50d992a4a</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:6E:39:0E</MAC>
+          <IPv4>192.0.2.7</IPv4>
+          <IPv6>2001:db8:0006::6</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-19/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-20/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="SNMPv2-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="400"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-3L72CKTOJS">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X007</Model>
+        <SKU>CBED-SKU-0007</SKU>
+        <Serial>SYYE47879584</Serial>
+        <HardwareRevision>R1.1</HardwareRevision>
+        <Firmware>
+          <Version>4.9.91</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">ab0103b4241dc4c5ab6c86fe6d5f8df374a70e0cba9d7e75fd26b714e53f4369</ImageHash>
+        </Firmware>
+        <UDI>ecf39ac3a1f2f159b9854e26116b6187</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:B9:EB:16</MAC>
+          <IPv4>192.0.2.8</IPv4>
+          <IPv6>2001:db8:0007::7</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-19/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-20/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-21/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-22/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="450"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-DSJWTS3QHW">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X008</Model>
+        <SKU>CBED-SKU-0008</SKU>
+        <Serial>EZOQ77399803</Serial>
+        <HardwareRevision>R2.4</HardwareRevision>
+        <Firmware>
+          <Version>1.16.4</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">8026a8bbdcba17bccf8c05f90e8b8976d34efb8351d918c656a64a19d8dd161e</ImageHash>
+        </Firmware>
+        <UDI>d64b7dfa4d8ef6c8c3bfb5cb9c6f211a</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:FE:BD:70</MAC>
+          <IPv4>192.0.2.9</IPv4>
+          <IPv6>2001:db8:0008::8</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-19/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-20/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-21/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-22/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-23/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-24/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="ENTITY-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="SNMPv2-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="500"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-GJIX9E5GRV">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X009</Model>
+        <SKU>CBED-SKU-0009</SKU>
+        <Serial>CATG54014847</Serial>
+        <HardwareRevision>R3.7</HardwareRevision>
+        <Firmware>
+          <Version>2.3.17</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">b044b2f9c31da075112f06c722bda47d353241a6db79fd17de41074e1bd1eeb8</ImageHash>
+        </Firmware>
+        <UDI>891855068efcfcdc6d01872f3addda67</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:8C:0B:A4</MAC>
+          <IPv4>192.0.2.10</IPv4>
+          <IPv6>2001:db8:0009::9</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-6/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="IF-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="SNMPv2-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="550"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-YK3V4UF5OI">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X010</Model>
+        <SKU>CBED-SKU-0010</SKU>
+        <Serial>IY8E08887899</Serial>
+        <HardwareRevision>R4.0</HardwareRevision>
+        <Firmware>
+          <Version>3.10.30</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">323d47259541b2ae0ef1d9f7e29f7154b2c54e6c80c596d912bb03ea9f4dcaad</ImageHash>
+        </Firmware>
+        <UDI>a5f404b35eea19487736e6bdd3c459ce</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:6F:9E:C5</MAC>
+          <IPv4>192.0.2.11</IPv4>
+          <IPv6>2001:db8:000a::a</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="IF-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="600"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-0X4ZRKKAWZ">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X011</Model>
+        <SKU>CBED-SKU-0011</SKU>
+        <Serial>W0JB87369384</Serial>
+        <HardwareRevision>R5.3</HardwareRevision>
+        <Firmware>
+          <Version>4.17.43</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">2bb8b70d4d48ff894a0263ebe26092246713bcf2f46b4bd52d55c38851cddf0d</ImageHash>
+        </Firmware>
+        <UDI>d032663a0238aa5546124332622d801e</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:91:BE:AE</MAC>
+          <IPv4>192.0.2.12</IPv4>
+          <IPv6>2001:db8:000b::b</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="RMON-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="650"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-90A7JV01CD">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X012</Model>
+        <SKU>CBED-SKU-0012</SKU>
+        <Serial>IJIO90138508</Serial>
+        <HardwareRevision>R0.6</HardwareRevision>
+        <Firmware>
+          <Version>1.4.56</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">4ab63f34f7311e542928f871b37d5d670f25adb57b495f96388d669ff441aa30</ImageHash>
+        </Firmware>
+        <UDI>f4fa6b097986bb70f198d1c978a16fa9</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:5C:DA:2B</MAC>
+          <IPv4>192.0.2.13</IPv4>
+          <IPv6>2001:db8:000c::c</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="700"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-G29L5N87HD">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X013</Model>
+        <SKU>CBED-SKU-0013</SKU>
+        <Serial>T03650483917</Serial>
+        <HardwareRevision>R1.9</HardwareRevision>
+        <Firmware>
+          <Version>2.11.69</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">e44398e50f3452cd943f82a344e610cf7a7dbe6381e974daee14d6d6f431efe8</ImageHash>
+        </Firmware>
+        <UDI>2a61e2742dc5d018f51ccc93a0d254bc</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:DC:93:AC</MAC>
+          <IPv4>192.0.2.14</IPv4>
+          <IPv6>2001:db8:000d::d</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="IF-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="750"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-2TMON5WB9R">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X014</Model>
+        <SKU>CBED-SKU-0014</SKU>
+        <Serial>JKR726551508</Serial>
+        <HardwareRevision>R2.2</HardwareRevision>
+        <Firmware>
+          <Version>3.18.82</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">d485a4b16e9973974cd623d5949a4f85b6ccc06828af777cf0f6f8809e5d3bfb</ImageHash>
+        </Firmware>
+        <UDI>2465545c2c905f1051e1ac861861dd69</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:D8:15:00</MAC>
+          <IPv4>192.0.2.15</IPv4>
+          <IPv6>2001:db8:000e::e</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-6/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="800"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-LVA24O0DCS">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X015</Model>
+        <SKU>CBED-SKU-0015</SKU>
+        <Serial>LBOH40269999</Serial>
+        <HardwareRevision>R3.5</HardwareRevision>
+        <Firmware>
+          <Version>4.5.95</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">fc01e761e652651c76d328646b988928924fbeff3e6dde1162cdb5a3effe5d48</ImageHash>
+        </Firmware>
+        <UDI>7794d147da2dec3292469ca2cbd00073</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:87:C7:31</MAC>
+          <IPv4>192.0.2.16</IPv4>
+          <IPv6>2001:db8:000f::f</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-19/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-20/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="SNMPv2-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="850"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-TM0B1G65AM">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X016</Model>
+        <SKU>CBED-SKU-0016</SKU>
+        <Serial>CO6P98704143</Serial>
+        <HardwareRevision>R4.8</HardwareRevision>
+        <Firmware>
+          <Version>1.12.8</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">97d91f05441443b31f675e4c1c49236c367fa2f4051f51be34955e6ab7553e6f</ImageHash>
+        </Firmware>
+        <UDI>f205d19f608129cb8a2e8da4a98caa7e</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:4B:64:E2</MAC>
+          <IPv4>192.0.2.17</IPv4>
+          <IPv6>2001:db8:0010::10</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-19/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-20/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-21/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-22/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="900"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-XNWQE83PTJ">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X017</Model>
+        <SKU>CBED-SKU-0017</SKU>
+        <Serial>1XDF48616828</Serial>
+        <HardwareRevision>R5.1</HardwareRevision>
+        <Firmware>
+          <Version>2.19.21</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">c0c705c34dff320242f27e0e42b4a3ab3d96a055681a5eefec483ffb06e3f45b</ImageHash>
+        </Firmware>
+        <UDI>3275392467d511dbfd400f627e492bad</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:18:A5:33</MAC>
+          <IPv4>192.0.2.18</IPv4>
+          <IPv6>2001:db8:0011::11</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-19/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-20/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-21/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-22/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-23/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-24/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="950"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-GCANB7MC81">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X018</Model>
+        <SKU>CBED-SKU-0018</SKU>
+        <Serial>L0GX00295954</Serial>
+        <HardwareRevision>R0.4</HardwareRevision>
+        <Firmware>
+          <Version>3.6.34</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">994dfdc3c9dbd71a45fe33b2a3ee37b6e7c6a28ed82ea9180bf46963cb4e6395</ImageHash>
+        </Firmware>
+        <UDI>f644277cb77c198c6551aa205b7eee54</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:6D:3D:2A</MAC>
+          <IPv4>192.0.2.19</IPv4>
+          <IPv6>2001:db8:0012::12</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="IF-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="1000"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-UAU4D33FE1">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X019</Model>
+        <SKU>CBED-SKU-0019</SKU>
+        <Serial>WRJD17468587</Serial>
+        <HardwareRevision>R1.7</HardwareRevision>
+        <Firmware>
+          <Version>4.13.47</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">c07f5d65b81ed095d42b54c45f63c9be9c2aa47c25ca1e21bf32611f52d8c09c</ImageHash>
+        </Firmware>
+        <UDI>93ab5454967809a0bf6907d97bac02e6</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:92:AE:77</MAC>
+          <IPv4>192.0.2.20</IPv4>
+          <IPv6>2001:db8:0013::13</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-6/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="IF-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="1050"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-8U41KY7V6H">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X020</Model>
+        <SKU>CBED-SKU-0020</SKU>
+        <Serial>KNOD95085796</Serial>
+        <HardwareRevision>R2.0</HardwareRevision>
+        <Firmware>
+          <Version>1.0.60</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">e60bc81ae379e5d4d57898118cca3754765b9a564f932ade55f7cdb1b1c8008b</ImageHash>
+        </Firmware>
+        <UDI>f6959d61e4d6c54b70cda31d6c717bb2</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:CC:06:E9</MAC>
+          <IPv4>192.0.2.21</IPv4>
+          <IPv6>2001:db8:0014::14</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="100"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-TILPNQY7HK">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X021</Model>
+        <SKU>CBED-SKU-0021</SKU>
+        <Serial>ST2184411457</Serial>
+        <HardwareRevision>R3.3</HardwareRevision>
+        <Firmware>
+          <Version>2.7.73</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">a1bab3be005cdba70fc0b68ff230f547c8110a7965467d1a320ec1a55d89199a</ImageHash>
+        </Firmware>
+        <UDI>486d17cb100f1228f6127beb287d73b2</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:D1:F4:77</MAC>
+          <IPv4>192.0.2.22</IPv4>
+          <IPv6>2001:db8:0015::15</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="RMON-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="BRIDGE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="150"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-PMS4GG1EFZ">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X022</Model>
+        <SKU>CBED-SKU-0022</SKU>
+        <Serial>BGD727483012</Serial>
+        <HardwareRevision>R4.6</HardwareRevision>
+        <Firmware>
+          <Version>3.14.86</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">917f3e267d21797b7ca30911bbb4edac59ab3dc7dc27b7ad487355430e59736f</ImageHash>
+        </Firmware>
+        <UDI>9a8bd1e0020e940e3ab36c46066d8a64</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:41:DD:A7</MAC>
+          <IPv4>192.0.2.23</IPv4>
+          <IPv6>2001:db8:0016::16</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="ENTITY-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="200"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-1T7RHK0VB2">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X023</Model>
+        <SKU>CBED-SKU-0023</SKU>
+        <Serial>4AMV79423475</Serial>
+        <HardwareRevision>R5.9</HardwareRevision>
+        <Firmware>
+          <Version>4.1.99</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">1915ab03b919d536a9e649fa729abd58578a2aad101084af7d1353d4dd6c17b1</ImageHash>
+        </Firmware>
+        <UDI>da768d727f79165a3005b8a12a57a360</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:28:D9:F7</MAC>
+          <IPv4>192.0.2.24</IPv4>
+          <IPv6>2001:db8:0017::17</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="ENTITY-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="250"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-KHFQ01LY1C">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X024</Model>
+        <SKU>CBED-SKU-0024</SKU>
+        <Serial>U0YZ45164354</Serial>
+        <HardwareRevision>R0.2</HardwareRevision>
+        <Firmware>
+          <Version>1.8.12</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">cded8eddabaf699f50d949a2ada352f9d060675c78bce1780dae550d877ab48e</ImageHash>
+        </Firmware>
+        <UDI>6eb5587bc426be8c37d4b708ffba3ccc</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:81:67:93</MAC>
+          <IPv4>192.0.2.25</IPv4>
+          <IPv6>2001:db8:0018::18</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-19/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-20/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-3/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-4/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-5/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-6/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="ENTITY-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="BRIDGE-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="RMON-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="300"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+    <DeviceProfile id="DEV-WTDD1ICRFK">
+      <Identity>
+        <Vendor>CobaltEdge</Vendor>
+        <Model>CBED-X025</Model>
+        <SKU>CBED-SKU-0025</SKU>
+        <Serial>A76I13900428</Serial>
+        <HardwareRevision>R1.5</HardwareRevision>
+        <Firmware>
+          <Version>2.15.25</Version>
+          <Build>2026-03-01T13:16:56Z</Build>
+          <ImageHash alg="sha256">5c1f3f86ad884316867ce829a4fa99d475b84951fde84991cac46bc59c60e045</ImageHash>
+        </Firmware>
+        <UDI>de9bbd75369ecd71bd83c336fb8695b9</UDI>
+      </Identity>
+      <Management>
+        <Interface name="mgmt0">
+          <MAC>E4:5F:01:3B:A1:C7</MAC>
+          <IPv4>192.0.2.26</IPv4>
+          <IPv6>2001:db8:0019::19</IPv6>
+          <DefaultUsername>admin</DefaultUsername>
+          <AuthProfiles>
+            <AuthProfile name="local" method="password" minLength="12" mfa="optional" />
+            <AuthProfile name="tacacs" method="tacacs+" timeoutSec="5" />
+            <AuthProfile name="radius" method="radius" timeoutSec="5" />
+          </AuthProfiles>
+        </Interface>
+      </Management>
+      <Interfaces>
+        <Port name="ge-1/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-2/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-3/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-4/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-5/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-6/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-7/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-8/0/0" type="rj45" speed="1G" poe="true" />
+        <Port name="ge-9/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-10/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-11/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-12/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-13/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-14/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-15/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-16/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-17/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-18/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-19/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-20/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-21/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="ge-22/0/0" type="rj45" speed="1G" poe="false" />
+        <Port name="xe-1/0/0" type="sfp28" speed="25G" poe="false" />
+        <Port name="xe-2/0/0" type="sfp28" speed="25G" poe="false" />
+      </Interfaces>
+      <Protocols>
+        <Protocol name="snmp"><Param name="versions" value="v2c,v3"/><Param name="auth" value="HMAC-SHA2-256"/><Param name="privacy" value="AES-256"/></Protocol>
+        <Protocol name="netconf"><Param name="transport" value="ssh"/><Param name="yang" value="1.1"/></Protocol>
+        <Protocol name="restconf"><Param name="transport" value="https"/><Param name="openapi" value="3.0"/></Protocol>
+        <Protocol name="gnmi"><Param name="transport" value="tls"/><Param name="encoding" value="proto,json"/></Protocol>
+        <Protocol name="syslog"><Param name="rfc" value="5424"/></Protocol>
+        <Protocol name="ntp"><Param name="rfc" value="5905"/></Protocol>
+        <Protocol name="ptp"><Param name="profile" value="IEEE1588v2"/></Protocol>
+        <Protocol name="sflow"><Param name="version" value="5"/></Protocol>
+        <Protocol name="lldp"><Param name="ieee" value="802.1AB"/></Protocol>
+      </Protocols>
+      <MIBs>
+        <MIB name="Q-BRIDGE-MIB" />
+        <MIB name="RMON-MIB" />
+        <MIB name="IF-MIB" />
+        <MIB name="HOST-RESOURCES-MIB" />
+        <MIB name="DISMAN-EVENT-MIB" />
+        <MIB name="SNMPv2-MIB" />
+        <MIB name="IEEE8021-PAE-MIB" />
+      </MIBs>
+      <Capabilities>
+        <Capability name="switching"><Param name="vlans" value="4094"/><Param name="stp" value="rstp,mstp"/><Param name="lacp" value="true"/></Capability>
+        <Capability name="routing"><Param name="ipv4" value="true"/><Param name="ipv6" value="true"/><Param name="bgp" value="true"/><Param name="ospf" value="true"/></Capability>
+        <Capability name="security"><Param name="macsec" value="802.1AE"/><Param name="dot1x" value="true"/><Param name="acl" value="l3,l4,l7-basic"/></Capability>
+        <Capability name="telemetry"><Param name="streaming" value="true"/><Param name="sampling_ms" value="350"/></Capability>
+        <Capability name="ha"><Param name="stacking" value="{true}"/><Param name="mlag" value="true"/></Capability>
+        <Capability name="qos"><Param name="queues" value="8"/><Param name="policers" value="hierarchical"/></Capability>
+      </Capabilities>
+      <Compliance>
+        <Standard name="CE" />
+        <Standard name="FCC" />
+        <Standard name="RoHS" />
+        <Standard name="IEC-62443-4-2" level="SL1" />
+      </Compliance>
+      <Support>
+        <EoS date="2031-03-01" />
+        <EoL date="2034-03-01" />
+        <Contact>
+          <Email>support@cbed.example</Email>
+          <Portal>https://support.cbed.example/</Portal>
+        </Contact>
+      </Support>
+    </DeviceProfile>
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  </ProductCatalog>
+</VendorProfile>
